@@ -218,7 +218,7 @@ def main():
                 x = x + 5
                 show_row1 = input('\nWould you like to see five more? please enter yes or no.\n').lower().strip()
                 if show_row1 == 'yes':
-                    print(df[x:x + 5])
+                    print(df[x:x + 10])
                 else:
                      break
 
