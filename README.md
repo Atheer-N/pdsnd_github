@@ -24,9 +24,9 @@ The Chicago and New York City files also have the following two columns:
 ### Files used
 we needed the three city dataset files:
 
-chicago.csv
-new_york_city.csv
-washington.csv
+* [chicago.csv]
+* [new_york_city.csv]
+* [washington.csv]
 
 
 ### Credits
