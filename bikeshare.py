@@ -28,7 +28,7 @@ def get_filters():
         except:
                  print('Oops! Something went wrong,try something else.')
 
-         
+
     # TO DO: get user input for month (all, january, february, ... , june)
     while True:
         try:
@@ -40,17 +40,17 @@ def get_filters():
                 print ("Sorry! it seems like you have entered an unavalible month, Can you please try again?")
         except:
                  print('Oops! Something went wrong,try something else.')
-     
-        
+
+
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
         try:
             day = input("Would you like to filter the data by a specific day? or you'd like to view it all? \n").lower().strip()
-            
+
             if day  in ['all', 'monday', 'tuesday', 'wednesday', 'friday', 'saturday', 'sunday']:
                  break
-             
+
             else:
                   print ("Sorry! it seems like you have entered an unavalible day, Can you please try again?")
         except:
@@ -71,7 +71,7 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-# load data file into a dataframe 
+# load data file into a dataframe
     df = pd.read_csv(CITY_DATA[city])
 
     # convert the Start Time column to datetime
@@ -113,12 +113,12 @@ def time_stats(df):
     # TO DO: display the most common day of week
     most_frequent_day = df["day_of_week"].mode()[0]
     print (f"The most frequent day according to  your fillters of choice is: {most_frequent_day} ")
-           
+
 
     # TO DO: display the most common start hour
     most_frequent_start_hour = df["Start hour"].mode()[0]
     print (f"The most frequent start hour according to  your fillters of choice is: {most_frequent_start_hour} ")
-    
+
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -132,7 +132,7 @@ def station_stats(df):
 
     # TO DO: display most commonly used start station
     most_common_start_station = df["Start Station"].mode()[0]
-    print(f"The most common start station is: {most_common_start_station} ")                  
+    print(f"The most common start station is: {most_common_start_station} ")
 
 
     # TO DO: display most commonly used end station
@@ -143,7 +143,7 @@ def station_stats(df):
     df["Stations Combined"]= df["Start Station"] + " " + df["End Station"]
     most_common_combination = df["Stations Combined"].mode()[0]
     print(f"The most common start & end station are: {most_common_combination}")
-    
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -207,12 +207,12 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df, city)
-       
-    
+
+
         show_row = input('\nWould you like to see five lines of raw data? please enter yes or no.\n').lower().strip()
         x = 0
         if show_row == 'yes':
-            print(df[x:x + 5])
+            print(df[x:x + 10])
 
             while True:
                 x = x + 5
