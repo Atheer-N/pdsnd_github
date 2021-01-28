@@ -30,6 +30,6 @@ washington.csv
 
 
 ### Credits
-https://docs.python.org/3/library/
-https://pandas.pydata.org/pandas-docs/stable/
-https://stackoverflow.com
+ * [The Python Standard Library](https://docs.python.org/3/library/)
+ * [Pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/)
+ * [Stack Overflow](https://stackoverflow.com)
